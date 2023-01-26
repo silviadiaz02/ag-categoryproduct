@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-content id="main-tab">
+    <h1>Autogermana</h1>
+  </mat-card-content>
+</mat-card>
+
+<div class="content">
+  <div class="tabs">
+<mat-tab-group>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">commute</mat-icon>
+      Categorias
+    </ng-template>
+    <app-categories/>
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">sports_motorsports</mat-icon>
+      Productos
+    </ng-template>
+    <app-products />
+  </mat-tab>
+</mat-tab-group>
+</div>
+</div>

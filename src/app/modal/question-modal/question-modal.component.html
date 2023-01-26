@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>{{questionModel.title}}</h1>
+<div class="modal-input" mat-dialog-content>
+<div mat-dialog-content>¿Estas seguro que quieres eliminarlo?</div>
+</div>
+<div class="button-modal" mat-dialog-actions>
+    <button class="red" *ngIf="questionModel.hasCancelButton" mat-button (click)="onCancelClick()">Cancelar</button>
+    <button class="blueone" mat-button (click)="onDelete()" [mat-dialog-close]="questionModel.buttonTitle">{{questionModel.buttonTitle}}</button>
+</div>

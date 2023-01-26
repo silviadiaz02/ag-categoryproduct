@@ -1,0 +1,15 @@
+.example-tab-icon {
+  margin-right: 8px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(50px, auto);
+}
+
+.tabs {
+  grid-column: 2 /12;
+  grid-row: 2;
+}

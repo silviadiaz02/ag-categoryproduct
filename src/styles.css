@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.content-tabs {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(50px, auto);
+}
+
+.table {
+    grid-column: 1 /13;
+    grid-row: 3;
+}
+
+.button {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.actions {
+    width: 170px;
+    text-align: left;
+}
+
+.mini-button {
+    margin: 2px;
+}
+
+.blueone {
+    background-color: #0f75bd !important;
+    color: white !important;
+}
+
+.bluetwo {
+    background-color: #262161 !important;
+    color: white !important;
+}
+
+.red {
+    background-color: #ed1b24 !important;
+    color: white !important;
+}
+
+.modal-input {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    min-width: 500px;
+    overflow: hidden !important;
+}
+
+.input {
+    width: 100% !important;
+    margin: 4px;
+}
+.button-modal{
+    justify-content: end !important;
+}
+.file-name {
+    margin-left: 1rem; 
+}
+.input-state{
+    width: 100% !important;
+    margin: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+body {
+    background: #f2f2f2;
+}

@@ -1,0 +1,3 @@
+<app-product-modal *ngIf="isProduct" [productModel]="data" (onNoClick)="onNoClick()" />
+<app-category-modal *ngIf="isCategory" [categoryModel]="data" (onNoClick)="onNoClick()"/>
+<app-question-modal *ngIf="isQuestion" [questionModel]="data" (onNoClick)="onNoClick()"/>

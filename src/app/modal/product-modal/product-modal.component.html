@@ -1,0 +1,48 @@
+<h1 mat-dialog-title>{{productModel.title}}</h1>
+<form #formProduct="ngForm" (ngSubmit)="onSubmit(formProduct)" novalidate>
+    <div class="modal-input" mat-dialog-content>
+        <mat-form-field class="input">
+            <mat-label>Codigo</mat-label>
+            <input name="codigo" #codigo="ngModel" [(ngModel)]="productForm.codigo" [disabled]="productModel.isDisabled"
+                matInput>
+        </mat-form-field>
+        <mat-form-field class="input">
+            <mat-label>Nombre</mat-label>
+            <input name="nombre" #nombre="ngModel" [(ngModel)]="productForm.nombre" [disabled]="productModel.isDisabled"
+                matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Categoria</mat-label>
+            <mat-select name="idcategoria" #idcategoria="ngModel" [(ngModel)]="productForm.idcategoria">
+                <mat-option *ngFor="let category of categorySource" [value]="category.idcategoria">
+                    {{category.nombre}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="input" appearance="fill" floatLabel="always">
+            <mat-label>Precio Venta</mat-label>
+            <input matInput name="precioVenta" #precioVenta="ngModel" [(ngModel)]="productForm.precioVenta"
+                [disabled]="productModel.isDisabled" type="number" class="example-right-align" placeholder="0">
+            <span matTextPrefix>$&nbsp;</span>
+            <span matTextSuffix>.00</span>
+        </mat-form-field>
+        <mat-form-field class="input">
+            <mat-label>Stock</mat-label>
+            <input name="stock" #stock="ngModel" type="number" [(ngModel)]="productForm.stock" [disabled]="productModel.isDisabled"
+                matInput>
+        </mat-form-field>
+        <mat-form-field class="input">
+            <mat-label>Descripcion</mat-label>
+            <textarea name="descripcion" #descripcion="ngModel" [(ngModel)]="productForm.descripcion"
+                [disabled]="productModel.isDisabled" matInput></textarea>
+        </mat-form-field>
+        <div class="input-state">
+            <mat-slide-toggle name="estado" #estado="ngModel" [(ngModel)]="productForm.estado"
+                [disabled]="productModel.isDisabled">Estado</mat-slide-toggle>
+        </div>
+    </div>
+    <div class="button-modal" mat-dialog-actions>
+        <button class="red" type="button" *ngIf="productModel.hasCancelButton" mat-button (click)="onCancelClick()">Cancelar</button>
+        <button class="blueone" type="submit" mat-button type="submit" [mat-dialog-close]="productModel.buttonTitle">{{productModel.buttonTitle}}</button>
+    </div>
+</form>
